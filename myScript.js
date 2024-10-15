@@ -20,8 +20,12 @@ function calcularImc() {
             classificacao = 'Peso normal';
         } else if (imc >= 25 && imc < 29.9) {
             classificacao = 'Acima do peso';
-        } else if (imc >= 30) {
-            classificacao = 'Obesidade';
+        } else if (imc >= 30 && imc < 35) {
+            classificacao = 'Obesidade grau 1 (Obesidade leve)';
+        } else if (imc >= 35 && imc < 40) {
+            classificacao = 'Obesidade grau 2 (Obesidade moderada)';
+        } else if (imc >= 40) {
+            classificacao = 'Obesidade grau 3 (Obesidade mórbida)';
         }
 
         // Exibe o resultado com 2 casas decimais e a classificação
